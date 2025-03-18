@@ -93,6 +93,9 @@ section {
 .card-title {
     color: var(--text-color); /* Accent color for titles */
     transition: color 0.25s ease-in-out;
+    font-size: 1.25rem; /* Matches <h5> size */
+    font-weight: bold;
+    margin: 0; /* Mimics <h5> default margins */
 }
 
 .card-text {
