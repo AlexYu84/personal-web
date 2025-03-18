@@ -125,4 +125,17 @@ document.getElementById('themeToggle').addEventListener('click', function() {
     }
 });
 
-  
+document.getElementById('projectSearch').addEventListener('input', function() {
+    const searchValue = this.value.toLowerCase();
+    const cards = document.querySelectorAll('#projectContainer .card');
+
+    cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        // Check if the search value matches the card title
+        if (title.includes(searchValue)) {
+            card.parentElement.style.display = 'block'; // Show matching card
+        } else {
+            card.parentElement.style.display = 'none'; // Hide non-matching card
+        }
+    });
+});

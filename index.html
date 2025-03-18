@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>03 - Starships</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="styles.css" />
     <!-- Include Bootstrap CSS -->
@@ -50,11 +49,14 @@
 
     <section id="welcome"></section>
 
-    <section id="projects" class="py-5">
+    <section id="projects" class="py-5 scrollable-section">
         <div class="container">
             <h2 class="text-center mb-4">My Projects</h2>
-            <div class="row">
-                <!-- Project 1 -->
+            <div class="search-bar">
+                <input type="text" id="projectSearch" class="form-control" placeholder="Search projects...">
+            </div>
+            <div class="row" id="projectContainer">
+                <!-- Example Project Cards -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card shadow-sm">
                         <div class="card-body">
@@ -62,8 +64,7 @@
                             <p class="card-text">Set up and managed server hosting on AWS using Terraform for
                                 infrastructure as code and AWS CLI for streamlined resource management, ensuring
                                 scalability and high performance.</p>
-                            <a href="https://github.com/AlexYu84/AWS-server-hosting" class="btn btn-primary"
-                                target="_blank">View on GitHub</a>
+                            <a href="https://github.com/AlexYu84/AWS-server-hosting" class="btn btn-primary" target="_blank">View on GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +96,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Classroom VR For Heavy Civil Operations</h5>
+                            <p class="card-text">Unity3D Hosting System Developed a deployable system to host interactive Unity3D scenes for Dr. Louis’s construction and engineering lectures, transforming text-based problems into immersive, hands-on learning experiences.</p>
+                            <a href="https://github.com/DWilson29/CVRHOCUnity" class="btn btn-primary"
+                                target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            
 
             <!-- View All Repositories Button -->
             <div class="text-center mt-4">

@@ -112,6 +112,26 @@ section {
     border-color: var(--dark-blue-hover);
 }
 
+.scrollable-section {
+    max-height: 500px; /* Adjust height as needed */
+    overflow-y: auto; /* Add vertical scroll when needed */
+    padding: 1rem; /* Ensure space around content */
+    background-color: var(--bg-color); /* Matches theme */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.scrollable-section::-webkit-scrollbar {
+    width: 8px; /* Custom scrollbar width */
+}
+
+.scrollable-section::-webkit-scrollbar-thumb {
+    background-color: var(--grayish); /* Scrollbar color */
+    border-radius: 4px;
+}
+
+
 
 /* Theme Toggle Button */
 #themeToggle {
