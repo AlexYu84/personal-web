@@ -15,7 +15,7 @@ const createWelcomeSection = () => {
   
     // Create and append the image
     const img = document.createElement('img');
-    img.src = '../images/image0.jpg'; // Replace with the actual path to your image
+    img.src = '/images/image0.jpg'; // Replace with the actual path to your image
     img.alt = 'an image of me!';
     img.classList.add('img-fluid', 'rounded-circle', 'mb-3'); // Bootstrap classes for rounded corners and spacing
     img.style.width = '150px'; // Optional: Set image width
