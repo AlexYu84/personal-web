@@ -9,7 +9,7 @@ const createWelcomeSection = () => {
   
     // Create and append the big "Hello" heading
     const helloHeading = document.createElement('h1');
-    helloHeading.textContent = ''; // Big greeting
+    helloHeading.textContent = 'Hello!'; // Big greeting
     helloHeading.classList.add('display-4', 'mb-4'); // Bootstrap class for large text and spacing
     container.appendChild(helloHeading);
   

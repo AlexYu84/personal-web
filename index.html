@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="styles.css" />
+    <title>Personal website</title>
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script defer src="index.js"></script>
@@ -52,15 +53,17 @@
     <section id="projects" class="py-5 scrollable-section">
         <div class="container">
             <h2 class="text-center mb-4">My Projects</h2>
-            <div class="search-bar">
-                <input type="text" id="projectSearch" class="form-control" placeholder="Search projects...">
+            <div class="form-group">
+                <label for="projectSearch">Search Projects</label>
+                <input type="text" id="projectSearch" class="form-control" placeholder="Search projects..." aria-label="Search projects">
             </div>
+            
             <div class="row" id="projectContainer">
                 <!-- Example Project Cards -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">AWS Server Hosting</h5>
+                            <h4 class="card-title">AWS Server Hosting</h4>
                             <p class="card-text">Set up and managed server hosting on AWS using Terraform for
                                 infrastructure as code and AWS CLI for streamlined resource management, ensuring
                                 scalability and high performance.</p>
@@ -233,10 +236,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
 
     <!-- Include Bootstrap JS, Popper.js, and jQuery -->
