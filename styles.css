@@ -1,51 +1,104 @@
 :root {
     --darker-blue: rgb(25, 20, 101, 1);
-    --darker-blue-transpaent: rgb(25, 20, 101, 0.7);
-    --dark-blue: rgba(33, 26, 144, 1);
+    --dark-blue-hover: rgba(33, 26, 144, 1);
     --blue: rgba(44, 21, 208, 1);
-    --light-blue: rgb(190, 182, 249);
-    --purple: rgba(124, 51, 185, 1);
+    --light-blue: rgb(82, 149, 171); /* Adjusted to be light blue */
     --white: rgb(255, 255, 255);
-    --transparent: rgba(0, 0, 0, 0);
     --light-gray: rgb(226, 226, 226);
-    --darker-blue-even-transpaent: rgb(25, 20, 101, 0.2);
     --grayish: rgb(79, 79, 79);
-}   
+}
 
+/* General Styles */
+body {
+    background-color: var(--light-gray); /* Light gray for background */
+    color: var(--grayish); /* Text color */
+    font-family: Arial, sans-serif;
+}
+
+/* Buttons */
 .form-button {
     width: 100%;
-    background-color: var(--grayish);
-    color: white;
-    border: 1px solid var(--grayish);
+    background-color: var(--light-blue); /* Light blue button background */
+    color: var(--white);
+    border: 1px solid var(--light-blue);
     font-family: inherit;
     font-size: 1rem;
     display: block;
     padding: 10px;
     margin-bottom: 20px;
-}
-  
-.form-button:hover {
-    background-color: var(--grayish);
-    color: var(--white);
-    border: 1px solid var(--grayish);
-    cursor: pointer;
     transition: 0.25s;
 }
 
-/* .form-buttons-container {
-    padding-bottom: 30px;
-} */
+.form-button:hover {
+    background-color: var(--dark-blue-hover); /* Dark blue on hover */
+    border: 1px solid var(--dark-blue-hover);
+    color: var(--white);
+    cursor: pointer;
+}
 
+/* Navbar Styling */
+.navbar {
+    background-color: var(--darker-blue); /* Darker blue for navbar */
+}
+
+.navbar .navbar-brand {
+    color: var(--white); /* White navbar brand text */
+}
+
+.navbar .nav-link {
+    color: var(--light-gray); /* Light gray for links */
+}
+
+.navbar .nav-link:hover {
+    color: var(--light-blue); /* Light blue on hover */
+}
+
+/* Cards */
+.card {
+    background-color: var(--white); /* White card background */
+    border: 1px solid var(--light-gray); /* Light gray border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-title {
+    color: var(--darker-blue); /* Darker blue for card titles */
+}
+
+.card-text {
+    color: var(--grayish); /* Medium gray for card text */
+}
+
+.card a.btn-primary {
+    background-color: var(--light-blue); /* Light blue button */
+    border-color: var(--light-blue);
+    color: var(--white);
+}
+
+.card a.btn-primary:hover {
+    background-color: var(--dark-blue-hover); /* Dark blue hover */
+    border-color: var(--dark-blue-hover);
+}
+
+/* Links */
+a {
+    color: var(--blue); /* Default link color */
+}
+
+a:hover {
+    color: var(--dark-blue-hover); /* Dark blue on hover */
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 600px) {
     .label-input-group {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .form-input-box {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .form-button {
-      width: 180px;
+        width: 180px; /* Adjust button width for smaller screens */
     }
 }
