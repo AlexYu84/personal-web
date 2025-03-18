@@ -1,0 +1,51 @@
+:root {
+    --darker-blue: rgb(25, 20, 101, 1);
+    --darker-blue-transpaent: rgb(25, 20, 101, 0.7);
+    --dark-blue: rgba(33, 26, 144, 1);
+    --blue: rgba(44, 21, 208, 1);
+    --light-blue: rgb(190, 182, 249);
+    --purple: rgba(124, 51, 185, 1);
+    --white: rgb(255, 255, 255);
+    --transparent: rgba(0, 0, 0, 0);
+    --light-gray: rgb(226, 226, 226);
+    --darker-blue-even-transpaent: rgb(25, 20, 101, 0.2);
+    --grayish: rgb(79, 79, 79);
+}   
+
+.form-button {
+    width: 100%;
+    background-color: var(--grayish);
+    color: white;
+    border: 1px solid var(--grayish);
+    font-family: inherit;
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+  
+.form-button:hover {
+    background-color: var(--grayish);
+    color: var(--white);
+    border: 1px solid var(--grayish);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* .form-buttons-container {
+    padding-bottom: 30px;
+} */
+
+@media screen and (max-width: 600px) {
+    .label-input-group {
+      flex-direction: column;
+    }
+  
+    .form-input-box {
+      width: 100%;
+    }
+  
+    .form-button {
+      width: 180px;
+    }
+}
