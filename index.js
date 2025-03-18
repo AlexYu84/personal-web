@@ -5,7 +5,7 @@ const createWelcomeSection = () => {
     // Create the container for the image and bio
     const container = document.createElement('div');
     container.classList.add('d-flex', 'flex-column', 'align-items-center', 'p-3', 'rounded'); // Bootstrap classes for vertical layout
-    container.style.backgroundColor = '#f8f9fa'; // Optional: Light background color
+    // container.style.backgroundColor = '#f8f9fa'; // Optional: Light background color
   
     // Create and append the big "Hello" heading
     const helloHeading = document.createElement('h1');
@@ -107,4 +107,22 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
         console.log('FAILED...', error);
       });
 });
+  
+// Select the toggle button and add an event listener
+document.getElementById('themeToggle').addEventListener('click', function() {
+    // Toggle the dark theme class on the body element
+    document.body.classList.toggle('dark-theme');
+    // Save the user's preference to localStorage
+    const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+  });
+  
+  // Apply the saved theme on page load
+  window.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-theme');
+    }
+});
+
   

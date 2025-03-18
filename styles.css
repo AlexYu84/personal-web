@@ -1,24 +1,49 @@
 :root {
+    /* Light Theme Colors */
+    --bg-color: var(--light-gray); /* Light theme background */
+    --text-color: var(--grayish); /* Light theme text */
     --darker-blue: rgb(25, 20, 101, 1);
     --dark-blue-hover: rgba(33, 26, 144, 1);
     --blue: rgba(44, 21, 208, 1);
-    --light-blue: rgb(82, 149, 171); /* Adjusted to be light blue */
+    --light-blue: rgb(82, 149, 171);
     --white: rgb(255, 255, 255);
     --light-gray: rgb(226, 226, 226);
     --grayish: rgb(79, 79, 79);
 }
 
-/* General Styles */
-body {
-    background-color: var(--light-gray); /* Light gray for background */
-    color: var(--grayish); /* Text color */
-    font-family: Arial, sans-serif;
+.dark-theme {
+    /* Dark Theme Colors */
+    --bg-color: #121212; /* Dark theme background */
+    --text-color: #e0e0e0; /* Dark theme text color */
+    --darker-blue: rgb(15, 15, 50, 1); /* Muted dark mode blue */
+    --dark-blue-hover: rgba(50, 50, 100, 1);
+    --blue: rgba(100, 120, 200, 1);
+    --light-blue: rgb(50, 110, 140); /* Softer light blue for dark mode */
+    --white: #dcdcdc; /* Off-white */
+    --light-gray: #2a2a2a; /* Dark gray for contrast */
+    --grayish: #b0b0b0; /* Light grayish text for dark mode */
 }
+
+/* Global Styling */
+body {
+    background-color: var(--bg-color); 
+    /* background-color: black; */
+    color: var(--text-color); 
+    font-family: Arial, sans-serif;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+section {
+    background-color: var(--bg-color); /* Apply dynamic background */
+    color: var(--text-color); /* Ensure text color changes too */
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
 
 /* Buttons */
 .form-button {
     width: 100%;
-    background-color: var(--light-blue); /* Light blue button background */
+    background-color: var(--light-blue);
     color: var(--white);
     border: 1px solid var(--light-blue);
     font-family: inherit;
@@ -26,11 +51,11 @@ body {
     display: block;
     padding: 10px;
     margin-bottom: 20px;
-    transition: 0.25s;
+    transition: 0.25s ease-in-out;
 }
 
 .form-button:hover {
-    background-color: var(--dark-blue-hover); /* Dark blue on hover */
+    background-color: var(--dark-blue-hover);
     border: 1px solid var(--dark-blue-hover);
     color: var(--white);
     cursor: pointer;
@@ -38,54 +63,79 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background-color: var(--darker-blue); /* Darker blue for navbar */
+    background-color: var(--darker-blue);
+    transition: background-color 0.25s ease-in-out;
 }
 
 .navbar .navbar-brand {
-    color: var(--white); /* White navbar brand text */
+    color: var(--white);
 }
 
 .navbar .nav-link {
-    color: var(--light-gray); /* Light gray for links */
+    color: var(--white);
 }
 
 .navbar .nav-link:hover {
-    color: var(--light-blue); /* Light blue on hover */
+    color: var(--light-blue);
 }
 
-/* Cards */
+/* Card Styling */
 .card {
-    background-color: var(--white); /* White card background */
-    border: 1px solid var(--light-gray); /* Light gray border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--grayish);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light mode shadow */
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
+
+
 
 .card-title {
-    color: var(--darker-blue); /* Darker blue for card titles */
+    color: var(--text-color); /* Accent color for titles */
+    transition: color 0.25s ease-in-out;
 }
 
 .card-text {
-    color: var(--grayish); /* Medium gray for card text */
+    color: var(--text-color); /* Dynamic text color for card body */
+    transition: color 0.25s ease-in-out;
 }
 
 .card a.btn-primary {
     background-color: var(--light-blue); /* Light blue button */
     border-color: var(--light-blue);
     color: var(--white);
+    transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
 }
 
 .card a.btn-primary:hover {
-    background-color: var(--dark-blue-hover); /* Dark blue hover */
+    background-color: var(--dark-blue-hover); /* Dark blue on hover */
     border-color: var(--dark-blue-hover);
+}
+
+
+/* Theme Toggle Button */
+#themeToggle {
+    background-color: var(--light-blue);
+    border-color: var(--dark-blue-hover);
+    color: var(--white);
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+
+#themeToggle:hover {
+    background-color: var(--dark-blue-hover);
+    border-color: var(--blue);
 }
 
 /* Links */
 a {
-    color: var(--blue); /* Default link color */
+    color: var(--blue);
 }
 
 a:hover {
-    color: var(--dark-blue-hover); /* Dark blue on hover */
+    color: var(--dark-blue-hover);
 }
 
 /* Responsive Styles */
@@ -99,6 +149,6 @@ a:hover {
     }
 
     .form-button {
-        width: 180px; /* Adjust button width for smaller screens */
+        width: 180px;
     }
 }
